@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+
+    $("#addOne").click(function(){
+        $("div").width(function(x, c){
+		 var txt = "";
+		 txt += $("#myBar").width() + $("#progress").html(txt); 
+        return c + 4;
+        });
+    });
+	
+	 $("#addFive").click(function(){
+        $("div").width(function(x, c){
+		var txt = "";
+		 txt += $("#myBar").width() + $("#progress").html(txt); 
+        return c + 20;
+        });
+    });
+	
+	
+	 $("#addTen").click(function(){
+        $("div").width(function(x, c){
+		 var txt = "";
+		 txt += $("#myBar").width() + $("#progress").html(txt); 
+        return c + 40;
+        });
+    });
+	
+	$('#reset').click(function()	{
+	
+		var resetWidth = 0;
+		$('#myBar').width(resetWidth);
+	
+	});
+	
+});
+</script>
+
+<style>
+
+	#addOne{ float:left; margin:20px;}
+	#addFive{ float:left; margin:20px;}
+	#addTen{ float:left; margin:20px;}
+	#reset { float:left; margin:20px;}
+
+</style>
+</head>
+<body>
+
+
+<div style="width:100%; max-width:420px; height:120px; background:gold; display:inline-block;">
+<div id="myBar" style=" position:relative; margin:10px; width:0%; max-width:400px; height:100px; background:#333; color:#fff;"></div>
+<button id="addOne">Donate &#163;1</button>
+<button id="addFive">Donate &#163;5</button>
+<button id="addTen">Donate &#163;10</button>
+<input style="color:#fff; float:left; margin:20px;" id="progress" size="20" name="currentWidth" type="text">
+<button id="reset">RESET</button>
+</div>
+
+</body>
+</html>
+
+
